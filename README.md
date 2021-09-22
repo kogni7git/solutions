@@ -1,2 +1,12 @@
 # Solutions
-This repository contains solutions to some Machine Learning Competitions on [drivendata.org](https://www.drivendata.org) and [zindi.africa](https://zindi.africa).
+This repository contains my best solutions to some Machine Learning Competitions on [drivendata.org](https://www.drivendata.org) and [zindi.africa](https://zindi.africa).
+
+* [AI4DClassificationAI](https://github.com/kogni7git/solutions/blob/main/AI4DClassificationAI.ipynb) is my best solution for [AI4D Malawi News Classification Challenge](https://zindi.africa/competitions/ai4d-malawi-news-classification-challenge).
+* [AI4DYorubaMT](https://github.com/kogni7git/solutions/blob/main/AI4DYorubaMT.ipynb) is my best solution for [AI4D Yorùbá Machine Translation Challenge](https://zindi.africa/competitions/ai4d-yoruba-machine-translation-challenge).
+* [DengAI](https://github.com/kogni7git/solutions/blob/main/DengAI.jl) is my best solution for [DengAI: Predicting Disease Spread](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/).
+* [EconomicAI](https://github.com/kogni7git/solutions/blob/main/EconomicAI.ipynb) is my best solution for [Economic Well-Being Prediction Challenge](https://zindi.africa/competitions/economic-well-being-prediction-challenge).
+* [GIZNLP_Preprocessing](https://github.com/kogni7git/solutions/blob/main/GIZNLP_Preprocessing.ipynb](https://github.com/kogni7git/solutions/blob/main/GIZNLP_Preprocessing.ipynb) and [GIZNLP_Modelling](https://github.com/kogni7git/solutions/blob/main/GIZNLP_Modelling.ipynb) is my best solution for [GIZ NLP Agricultural Keyword Spotter](https://zindi.africa/competitions/giz-nlp-agricultural-keyword-spotter).
+* [MentalAI](https://github.com/kogni7git/solutions/blob/main/MentalAI.ipynb) is my best solution for [Basic Needs Basic Rights Kenya - Tech4MentalHealth](https://zindi.africa/competitions/basic-needs-basic-rights-kenya-tech4mentalhealth).
+* [PAYGoAI](https://github.com/kogni7git/solutions/blob/main/PAYGoAI.ipynb) is my best solution for [SFC PAYGo Solar Credit Repayment Competition](https://zindi.africa/competitions/sfc-paygo-solar-credit-repayment-competition).
+* [PumpAI](https://github.com/kogni7git/solutions/blob/main/PumpAI.R) is my best solution for [Pump it Up: Data Mining the Water Table](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/).
+* [TuberculAI](https://github.com/kogni7git/solutions/blob/main/PumpAI.R) is my best solution for [Runmila AI Institute & minoHealth AI Labs Tuberculosis Classification via X-Rays Challenge](https://zindi.africa/competitions/runmila-ai-institute-minohealth-ai-labs-tuberculosis-classification-via-x-rays-challenge).
