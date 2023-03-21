@@ -1,0 +1,96 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header header header header header header'
+  'plot plot plot plot results settings'
+  'plot plot plot plot results settings'
+  'plot plot plot plot results settings'
+  'plot plot plot plot results settings';
+  grid-gap: 10px;
+  background-color: #ffff80;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+  border-radius: 25px;
+  background: #ffffcc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-family: Helvetica;
+}
+
+.plot {
+  grid-area: plot;
+  border-radius: 25px;
+  background: #ffffcc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.settings {
+  grid-area: settings;
+  border-radius: 25px;
+  background: #ffffcc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: left;
+  font-family: Helvetica;
+}
+
+.settings_content {
+  margin: 25px 25px 25px 25px;
+}
+
+.results {
+  grid-area: results;
+  border-radius: 25px;
+  background: #ffffcc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: left;
+  font-family: Helvetica;
+}
+
+.results_content {
+  margin: 25px 25px 25px 25px;
+}
+
+.grid-container > div {
+  background-color: #ffffcc;;
+  padding: 20px 0;
+}
+
+#button {
+  padding: 15px 25px;
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  background-color: #ffb833;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#button:hover {background-color: orange}
+
+#button:active {
+  background-color: orange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+body {
+  background-color: #ffff80;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  text-shadow: 2px 2px orange;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  text-shadow: 2px 2px orange;
+}

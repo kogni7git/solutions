@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A simple Shiny App</title>
+  <script src="shared/jquery.js" type="text/javascript"></script>
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class=header>
+      <h1>A simple Shiny App with the iris and the Puromycin dataset</h1>
+    </div>
+  
+    <div class="plot">
+      <div id="plot" class="shiny-plot-output" style="width: 100%; height: 650px"></div>
+    </div>
+    
+    <div class="settings">
+      <div class="settings_content">
+      <h2>Settings</h2>
+        <div style="text-align: center; margin: 0px 0px 25px 0px">
+          <button id="button" type="button" class="btn btn-default action-button">
+            RESAMPLE DATA
+          </button>
+        </div>
+        <div id="algorithm" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="algorithm-label" style="accent-color: orange">
+            <div class="shiny-options-group">
+              <div class="radio" style="margin: 0px 0px 10px 0px">
+                <label>
+                  <input type="radio" name="algorithm" value="bayes" checked="checked"/>
+                  <span><b>Naive Bayes Classifier</b></span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="algorithm" value="knn"/>
+                  <span><b>k-Nearest Neighbour Classifier</b></span>
+                </label>
+                <div class="form-group shiny-input-container" style="margin: 0px 0px 10px 25px">
+                  <label>k:</label>
+                    <input id="k" type="number" class="form-control" value="1" min="1" max="5" step="1" lang="en" size="1"/>
+                </div>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="algorithm" value="tree"/>
+                  <span><b>Tree</b></span>
+                </label>
+                <div class="form-group shiny-input-container" style="margin: 0px 0px 10px 25px">
+                  <label>Maximal depth:</label>
+                    <input id="maxdepth" type="number" class="form-control" value="0" min="0" max="15" step="1" lang="en" size="2"/>
+                </div>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="algorithm" value="forest"/>
+                  <span><b>Random Forest</b></span>
+                </label>
+                <div class="form-group shiny-input-container" style="margin: 0px 0px 10px 25px">
+                  <label>Number of trees:</label>
+                    <input id="ntree" type="number" class="form-control" value="1" min="1" max="500" step="1" lang="en" size="3"/>
+                </div>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="algorithm" value="svm"/>
+                  <span><b>Support Vector Machine</b></span>
+                </label>
+                <div class="form-group shiny-input-container">
+                  <div class="checkbox" style="margin: 0px 0px 0px 25px">
+                    <label>
+                      <input id="scale" type="checkbox" checked="checked" style="accent-color: orange"/>
+                      <span>Scale data</span>
+                    </label>
+                  </div>
+                </div>
+                <div id="typ" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="typ-label" style="margin: 0px 0px 0px 25px">
+                  <div class="shiny-options-group">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="typ" value="C-classification" checked="checked"/>
+                        <span>C-classification</span>
+                      </label>
+                      <div class="form-group shiny-input-container" style="margin: 0px 0px 0px 25px">
+                        <label>C:</label>
+                        <input id="cost" type="number" class="form-control" value="1" min="1" max="5" step="0.1" lang="en" size="1"/>
+                      </div>
+                    </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="typ" value="nu-classification"/>
+                      <span>nu-classification</span>
+                    </label>
+                    <div class="form-group shiny-input-container" style="margin: 0px 0px 0px 25px">
+                      <label>nu:</label>
+                      <input id="nu" type="number" class="form-control" value="0.5" min="0" max="5" step="0.01" lang="en" size="2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="kernel" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="kernel-label" style="margin: 0px 0px 0px 25px; accent-color: orange;">
+                <label>Kernel:</label>
+                  <div class="shiny-options-group">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="kernel" value="linear" checked="checked"/>
+                        <span>linear</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="kernel" value="polynomial"/>
+                        <span>polynomial</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="kernel" value="radial"/>
+                        <span>radial</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="kernel" value="sigmoid"/>
+                        <span>sigmoid</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="results">
+      <div class="results_content">
+        <h2>Results</h2>  
+          <p><b>Algorithm: </b> <span id="text_algorithm" class="shiny-text-output"></span></p>
+          <p>
+            <label><b>iris</b></label><br>
+            train Accuracy: <b><span id="text_iris_train" class="shiny-text-output"></span></b><br />
+            test Accuracy: <b><span id="text_iris_test" class="shiny-text-output"></span></b>
+          </p>
+          <p>
+            <label><b>Puromycin</b></label><br>
+            train Accuracy: <b><span id="text_Puromycin_train" class="shiny-text-output"></span></b><br />
+            test Accuracy: <b><span id="text_Puromycin_test" class="shiny-text-output"></span></b>
+          </p>
+          <div style="margin: 50px 0px 0px 0px">
+            <div id="plot_accuracy" class="shiny-plot-output" style="width: 100%; height: 300px"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+  
+</html>
