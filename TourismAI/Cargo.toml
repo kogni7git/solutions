@@ -1,0 +1,11 @@
+[package]
+name = "tourism_ai"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+csv = "1.1.6"
+ndarray = "0.15.6"
+linfa = "0.6.0"
+linfa-elasticnet = "0.6.0"
+linfa-svm = "0.6.0"
