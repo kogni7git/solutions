@@ -8,6 +8,7 @@ date: Winter 2022/2023
 This project uses only the data sets provided by drivendata. These data sets contain information about people and if they got an H1N1 and/or flu vaccine. The task is to predict if an invidual gets a vaccine.
 
 The file system for this project is:
+
 FluAI (root)
    * Data
    * Submission
