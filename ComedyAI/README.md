@@ -8,14 +8,14 @@ This project uses only the data sets provided by ZINDI. These data sets contain 
 
 The file system for this project is:
 ComedyAI (root)
-    * Data
-    * Submission
-        * 1 - x: Submission directories named by the version number
-            * submission.csv
-            * output.md
-    * README.md
-    * main.c
-    * tools.h
+   * Data
+   * Submission
+      * 1 - x: Submission directories named by the version number
+         * submission.csv
+         * output.md
+   * README.md
+   * main.c
+   * tools.h
 
 This project uses LightGBM.
 
