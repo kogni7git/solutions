@@ -204,6 +204,12 @@ This repository contains my best solutions to some Machine Learning Competitions
 - Technologies: Python, Gym, stable-baselines3, seaborn, mlflow
 - Code: <https://github.com/kogni7git/solutions/blob/main/deep-reinforcement-learning.ipynb>
 
+## Prompt Engineering
+- Type: Own project
+- Method: Prompt Engineering
+- Technology: Python, Mistral
+- Code: <https://github.com/kogni7git/solutions/blob/main/prompt-engineering.ipynb>
+
 ## World Happiness
 - Type: Exploratory Data Analysis with data from the world happiness report
 - Methods: SQL, Unsupervised Learning (Clustering with kmeans)
